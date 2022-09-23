@@ -4,7 +4,7 @@ import Survey from "./pages/survey";
 
 const routes = [
   {
-    path: "/register",
+    path: "/",
     name: "register",
     component: Register,
     props: true,
@@ -14,14 +14,6 @@ const routes = [
     name: "register.survey",
     component: Survey,
     props: true,
-    beforeEnter: (to, from, next) => {
-      console.log(from.name);
-      if (from.name === "register") {
-        next();
-      } else {
-        next({ name: "register" });
-      }
-    },
   },
 ];
 export default createRouter({

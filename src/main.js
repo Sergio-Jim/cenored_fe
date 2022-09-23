@@ -2,12 +2,14 @@ import "./index.css";
 import App from "./App.vue";
 import router from "./router";
 import { createApp } from "vue";
+// import authPlugin from "./auth/authPlugin"
 import VueLoaders from "vue-loaders";
 import "vue-loaders/dist/vue-loaders.css";
 import { vfmPlugin } from "vue-final-modal";
 import "flowbite";
 
-import * as apolloProvider from "./apollo.provider.js";
+
+import * as apolloProvider from './apollo.provider'
 
 import Toast from "vue-toastification";
 // Import the CSS or use your own!
