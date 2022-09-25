@@ -19,7 +19,7 @@
             <div class="mb-4">
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
-                for="firstname"
+                for="firstName"
                 >First Name</label
               >
               <input
@@ -35,10 +35,10 @@
                   leading-tight
                   focus:outline-none focus:shadow-outline
                 "
-                id="firstname"
-                type="firstname"
+                id="firstName"
+                type="firstName"
                 placeholder="First Name"
-                v-model="firstname"
+                v-model="firstName"
               />
             </div>
 
@@ -110,23 +110,18 @@
 <script>
 export default {
   name: "Register",
-  data() {
-    return {
-      loading: false,
-    };
-  },
   methods: {
-    fillSurvey() {
+    async fillSurvey() {
       this.$router.push("survey");
     },
   },
   computed: {
-    firstname: {
+    firstName: {
       get() {
-        return sessionStorage.getItem("firstname");
+        return sessionStorage.getItem("firstName");
       },
       set(val) {
-        sessionStorage.setItem("firstname", val);
+        sessionStorage.setItem("firstName", val);
       },
     },
     surname: {
