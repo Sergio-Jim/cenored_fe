@@ -7,7 +7,7 @@ import { createUploadLink } from "apollo-upload-client";
 const httpLink = createUploadLink({
   uri:
     process.env.NODE_ENV == "production"
-      ? "http://localhost:4000/graphql"
+      ? "http://dolphin-app-ewqob.ondigitalocean.app/graphql"
       : "http://localhost:4000/graphql",
 });
 
