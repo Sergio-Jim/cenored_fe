@@ -140,7 +140,7 @@
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
             <p class="text-blue-400">
-              3. How responsive have CENORED been to your questions/concerns
+              3. How responsive has CENORED been to your questions/concerns
               about our service?
             </p>
           </div>
@@ -503,8 +503,66 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
+            <p class="text-blue-400">9. Are our offices clean?</p>
+          </div>
+          <div class="flex flex-row justify-center">
+            <p>
+              <input
+                id="question9-1"
+                type="radio"
+                name="question9"
+                value="1"
+                v-model="question9"
+              />
+              <label for="question9-1"> 1</label>
+              <input
+                class="ml-5"
+                id="question9-2"
+                type="radio"
+                name="question9"
+                value="2"
+                v-model="question9"
+              />
+              <label for="question9-2"> 2</label>
+              <input
+                class="ml-5"
+                id="question9-3"
+                type="radio"
+                name="question9"
+                value="3"
+                v-model="question9"
+              />
+              <label for="question9-3"> 3</label>
+              <input
+                class="ml-5"
+                id="question9-4"
+                type="radio"
+                name="question9"
+                value="4"
+                v-model="question9"
+              />
+              <label for="question9-4"> 4</label>
+              <input
+                class="ml-5"
+                id="question9-5"
+                type="radio"
+                name="question9"
+                value="5"
+                v-model="question9"
+              />
+              <label for="question9-5"> 5</label>
+            </p>
+          </div>
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
+            <p>Disappointing</p>
+            <p>Exceptional</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col mb-6">
+          <div class="flex flex-row mb-2">
             <p class="text-blue-400">
-              9. Which other options are available and you are considering as
+              10. Which other options are available and you are considering as
               alternative to CENORED and why?
             </p>
           </div>
@@ -512,7 +570,7 @@
             <p>
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
-                for="question9"
+                for="question10"
               >
               </label>
               <input
@@ -525,42 +583,6 @@
                   px-3
                   text-gray-700
                   leading-tight
-                "
-                style="width: 50vw"
-                id="question9"
-                type="text"
-                placeholder="question9"
-                v-model="question9"
-              />
-            </p>
-          </div>
-          <div class="flex flex-row justify-evenly border-b-2 mt-2"></div>
-        </div>
-
-        <div class="flex flex-col mb-6">
-          <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
-              10. What would you improve about CENORED if you could?
-            </p>
-          </div>
-          <div class="flex flex-row justify-center">
-            <p>
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="question9"
-              >
-              </label>
-              <input
-                class="
-                  shadow
-                  appearance-none
-                  border
-                  rounded
-                  py-3
-                  px-3
-                  text-gray-700
-                  leading-tight
-                  focus:outline-none focus:shadow-outline
                 "
                 style="width: 50vw"
                 id="question10"
@@ -576,14 +598,14 @@
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
             <p class="text-blue-400">
-              11. What is your approximate monthly expenditure to CENORED?
+              11. What would you improve about CENORED if you could?
             </p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
-                for="question9"
+                for="question11"
               >
               </label>
               <input
@@ -611,60 +633,38 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">12. Are our offices clean?</p>
+            <p class="text-blue-400">
+              12. What is your approximate monthly expenditure to CENORED?
+            </p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="question12"
+              >
+              </label>
               <input
-                id="question112-1"
-                type="radio"
-                name="question12"
-                value="1"
+                class="
+                  shadow
+                  appearance-none
+                  border
+                  rounded
+                  py-3
+                  px-3
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none focus:shadow-outline
+                "
+                style="width: 50vw"
+                id="question12"
+                type="text"
+                placeholder="question12"
                 v-model="question12"
               />
-              <label for="question12-1"> 1</label>
-              <input
-                class="ml-5"
-                id="question12-2"
-                type="radio"
-                name="question12"
-                value="2"
-                v-model="question12"
-              />
-              <label for="question12-2"> 2</label>
-              <input
-                class="ml-5"
-                id="question12-3"
-                type="radio"
-                name="question12"
-                value="3"
-                v-model="question12"
-              />
-              <label for="question12-3"> 3</label>
-              <input
-                class="ml-5"
-                id="question12-4"
-                type="radio"
-                name="question12"
-                value="4"
-                v-model="question12"
-              />
-              <label for="question12-4"> 4</label>
-              <input
-                class="ml-5"
-                id="question12-5"
-                type="radio"
-                name="question12"
-                value="5"
-                v-model="question12"
-              />
-              <label for="question12-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
-            <p>Disappointing</p>
-            <p>Exceptional</p>
-          </div>
+          <div class="flex flex-row justify-evenly border-b-2 mt-2"></div>
         </div>
 
         <div class="flex flex-col mb-6">
