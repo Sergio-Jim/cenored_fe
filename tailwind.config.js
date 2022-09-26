@@ -11,10 +11,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Change with you want it
-        "litepie-primary": colors.yellow, // color system for light mode
-        "litepie-secondary": colors.gray, // color system for dark mode
-        gold: "#ffd700",
+        cenoredblue: "#193E75",
+        cenoredgreen: "#1B7D44",
       },
     },
   },

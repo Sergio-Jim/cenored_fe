@@ -1,106 +1,160 @@
 <template>
-  <div style="display: flex; height: 100%; overflow-y: auto">
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+      padding: 20px 30px;
+    "
+  >
     <div
-      style="flex-grow: 1; display: flex; flex-direction: column; margin: 5%"
+      class="border-b-2"
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <img src="@/assets/logo.png" style="height: 80px; margin-bottom: 10px" />
+      <span
+        style="cursor: pointer; margin-bottom: 10px"
+        v-on:click="this.$router.push('/')"
+        >Survey Dashboard</span
+      >
+    </div>
+    <div
+      style="display: flex; flex-direction: row; height: 100%; margin-top: 20px"
     >
       <div
         style="
+          flex-grow: 1;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
           align-items: center;
+          margin-top: 5%;
         "
       >
-        <img src="@/assets/logo.png" style="height: 50px" />
+        <div
+          style="
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <h1 class="text-3xl">Customer Satisfaction Survey</h1>
+          <br />
+          <p class="text-blue-400">Dear Valued Customer,</p>
+          <br />
+          <p class="text-blue-400">
+            Please take a moment to take our Customer Satisfaction Survey so we
+            can
+          </p>
+          <p class="text-blue-400">
+            serve you better as we are committed to providing you with the best
+            services
+          </p>
+          <p class="text-blue-400">and customer experience possible.</p>
+        </div>
       </div>
-      <div style="margin-top: 15px; display: flex; justify-content: center">
-        <div>
-          <form class="rounded px-8 pt-6 pb-8 mb-4" style="min-width: 30vw">
-            <br />
-            <div class="mb-4">
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="firstName"
-                >First Name</label
-              >
-              <input
-                class="
-                  shadow
-                  appearance-none
-                  border
-                  rounded
-                  w-full
-                  py-2
-                  px-3
-                  text-gray-700
-                  leading-tight
-                  focus:outline-none focus:shadow-outline
-                "
-                id="firstName"
-                type="firstName"
-                placeholder="First Name"
-                v-model="firstName"
-              />
-            </div>
+      <div style="width: 45%">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5%;
+          "
+        >
+          <div style="margin-top: 15px; display: flex; justify-content: center">
+            <div>
+              <form class="rounded px-8 pt-6 pb-8 mb-4" style="min-width: 30vw">
+                <br />
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="firstName"
+                    >First Name</label
+                  >
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="firstName"
+                    type="firstName"
+                    placeholder="First Name"
+                    v-model="firstName"
+                  />
+                </div>
 
-            <div class="mb-6">
-              <label
-                class="block text-gray-700 text-sm font-bold mb-2"
-                for="surname"
-                >Surname</label
-              >
-              <input
-                class="
-                  shadow
-                  appearance-none
-                  border
-                  rounded
-                  w-full
-                  py-2
-                  px-3
-                  text-gray-700
-                  leading-tight
-                  focus:outline-none focus:shadow-outline
-                "
-                id="surname"
-                type="surname"
-                placeholder="Surname"
-                v-model="surname"
-              />
-            </div>
+                <div class="mb-6">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="surname"
+                    >Surname</label
+                  >
+                  <input
+                    class="
+                      shadow
+                      appearance-none
+                      border
+                      rounded
+                      w-full
+                      py-2
+                      px-3
+                      text-gray-700
+                      leading-tight
+                      focus:outline-none focus:shadow-outline
+                    "
+                    id="surname"
+                    type="surname"
+                    placeholder="Surname"
+                    v-model="surname"
+                  />
+                </div>
 
-            <div class="flex items-center justify-between">
-              <button
-                class="
-                  bg-gold
-                  transition-color
-                  duration-700
-                  transform
-                  hover:bg-yellow-400
-                  text-black
-                  py-2
-                  px-4
-                  border border-yellow-400
-                  rounded-lg
-                  w-full
-                  focus:outline-none focus:shadow-outline
-                  flex
-                  items-center
-                  justify-center
-                "
-                style="height: 40px"
-                v-on:click="fillSurvey"
-                type="button"
-              >
-                <vue-loaders
-                  v-if="this.loading"
-                  name="line-scale"
-                  color="black"
-                  scale="0.5"
-                ></vue-loaders>
-                <div v-else>Fill Survey</div>
-              </button>
+                <div class="flex items-center justify-between">
+                  <button
+                    class="
+                      bg-cenoredblue
+                      transition-color
+                      duration-700
+                      transform
+                      hover:bg-blue-600 hover:text-black
+                      text-white
+                      py-2
+                      px-4
+                      border border-cenoredgreen
+                      rounded-lg
+                      w-full
+                      flex
+                      items-center
+                      justify-center
+                    "
+                    style="height: 40px"
+                    v-on:click="fillSurvey"
+                    type="button"
+                  >
+                    <vue-loaders
+                      v-if="this.loading"
+                      name="line-scale"
+                      color="black"
+                      scale="0.5"
+                    ></vue-loaders>
+                    <div v-else>Fill Survey</div>
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -135,6 +189,7 @@ export default {
   },
 };
 </script>
-
+    
 <style scoped>
 </style>
+    

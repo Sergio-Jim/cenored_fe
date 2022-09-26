@@ -9,11 +9,17 @@
       padding: 20px 20%;
     "
   >
-    <form class="rounded px-8 pt-6 pb-8 mb-4 mt-12">
+    <div>
+      <img
+        src="@/assets/cenored-header.png"
+        style="height: 100%; width: 100%"
+      />
+    </div>
+    <form class="px-8 pt-6 pb-8 mb-4 mt-12">
       <div class="flex flex-col">
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               1. Please rate the quality of the services you receive from
               CENORED.
             </p>
@@ -65,7 +71,7 @@
               <label for="question1-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -73,7 +79,9 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>2. How well does CENORED service meet your needs?</p>
+            <p class="text-blue-400">
+              2. How well does CENORED service meet your needs?
+            </p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
@@ -123,7 +131,7 @@
               <label for="question2-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -131,7 +139,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               3. How responsive have CENORED been to your questions/concerns
               about our service?
             </p>
@@ -184,7 +192,7 @@
               <label for="question3-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -192,7 +200,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               4. How do you compared to our service to that of our competitors?
             </p>
           </div>
@@ -244,7 +252,7 @@
               <label for="question4-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -252,7 +260,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               5. On a scale of 1 to 5, how likely are you to recommend CENORED
               to someone else?
             </p>
@@ -305,7 +313,7 @@
               <label for="question5-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -313,7 +321,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               6. On a scale of 1 to 5, how do you rate the correlation between
               CENORED tariffs and services?
             </p>
@@ -366,7 +374,7 @@
               <label for="question6-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -374,7 +382,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               7. How easy is it to engage our staff when you have a query or
               complaint?
             </p>
@@ -427,7 +435,7 @@
               <label for="question7-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -435,7 +443,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               8. How much effort did you put in to access the above assistance?
             </p>
           </div>
@@ -487,7 +495,7 @@
               <label for="question8-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -495,7 +503,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               9. Which other options are available and you are considering as
               alternative to CENORED and why?
             </p>
@@ -531,7 +539,9 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>10. What would you improve about CENORED if you could?</p>
+            <p class="text-blue-400">
+              10. What would you improve about CENORED if you could?
+            </p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
@@ -565,7 +575,9 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>11. What is your approximate monthly expenditure to CENORED?</p>
+            <p class="text-blue-400">
+              11. What is your approximate monthly expenditure to CENORED?
+            </p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
@@ -599,7 +611,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>12. Are our offices clean?</p>
+            <p class="text-blue-400">12. Are our offices clean?</p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
@@ -649,7 +661,7 @@
               <label for="question12-5"> 5</label>
             </p>
           </div>
-          <div class="flex flex-row justify-evenly border-b-2">
+          <div class="flex flex-row justify-evenly border-b-2 text-gray-500">
             <p>Disappointing</p>
             <p>Exceptional</p>
           </div>
@@ -657,7 +669,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p>
+            <p class="text-blue-400">
               13. Please suggest any improvement to our services to help CENORED
               serve you better.
             </p>
@@ -692,19 +704,40 @@
           <div class="flex flex-row justify-evenly border-b-2 mt-2"></div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div class="flex flex-row justify-center">
           <button
             class="
-              bg-gold
-              border border-gray-700
+              bg-red-600
+              border border-black
               transition-colors
               duration-700
               transform
-              hover:bg-yellow-400
-              text-gray-700
+              hover:bg-red-900 hover:text-white
+              text-black
               px-4
               mty-8
               rounded-lg
+              mr-2
+            "
+            type="button"
+            v-on:click="clearForm"
+          >
+            <div class="py-2">Clear Form</div>
+          </button>
+
+          <button
+            class="
+              bg-cenoredgreen
+              border border-black
+              transition-colors
+              duration-700
+              transform
+              hover:bg-green-700 hover:text-white
+              text-black
+              px-4
+              mty-8
+              rounded-lg
+              ml-2
             "
             type="button"
             v-on:click="submitSurvey"
@@ -714,6 +747,42 @@
         </div>
       </div>
     </form>
+    <div style="height: 100%; width: 100%">
+      <div
+        class="
+          flex flex-col
+          items-center
+          text-center text-sm text-blue-400
+          mt-4
+        "
+      >
+        <p>Company Registration no: 2003/0153</p>
+        <p>
+          Directors: M. Matyayi (Chairperson), K P Iyambo (Deputy Chairperson),
+          R. Kahimise (Chief Executive Officer)
+        </p>
+        <p>
+          A. Barlow, V. Gabriel, J. A. /Urib, J. Hangara, A. Mweti, F. K.
+          Kamati,
+        </p>
+        <p>B.Mapoha (Legal Compliance Officer/Company Secretary)</p>
+      </div>
+    </div>
+    <br />
+    <div class="flex flex-col items-center text-center text-sm">
+      <p>
+        Shareholders: Tsumeb Municipality, Grootfontein Municipality,
+        Otjiwarongo Municipality, Outjo
+      </p>
+      <p>
+        Municipality, Khorixas Town Council, Okakarara Town Council, Otavi Town
+        Council, Kamanjab Village Council,
+      </p>
+      <p>
+        Otjozondjupa Regional Council, Kunene Regional Council, Oshikoto
+        Regional Council, NamPower
+      </p>
+    </div>
   </div>
 </template>
 
