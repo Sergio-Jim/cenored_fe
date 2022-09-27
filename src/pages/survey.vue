@@ -6,8 +6,9 @@
       height: 100%;
       width: 100%;
       overflow-y: scroll;
-      padding: 20px 20%;
+   
     "
+    class="md:pl-72 md:pr-72 md:pt-5 md:pb-2 sm:p-0 "
   >
     <div>
       <img

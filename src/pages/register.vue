@@ -21,7 +21,8 @@
       >
     </div>
     <div
-      style="display: flex; flex-direction: row; height: 100%; margin-top: 20px"
+      
+      class="w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0"
     >
       <div
         style="
@@ -34,7 +35,7 @@
       >
         <div
           style="
-            margin-top: 15px;
+          margin-top: 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -56,7 +57,7 @@
           <p class="text-blue-400">and customer experience possible.</p>
         </div>
       </div>
-      <div style="width: 45%">
+      <div   class="md:w-1/2 sm:w-full">
         <div
           style="
             display: flex;
@@ -67,7 +68,7 @@
         >
           <div style="margin-top: 15px; display: flex; justify-content: center">
             <div>
-              <form class="rounded px-8 pt-6 pb-8 mb-4" style="min-width: 30vw">
+              <form class="rounded px-8 pt-6 pb-8 mb-4  " style="min-width: 30vw">
                 <br />
                 <div class="mb-4">
                   <label
