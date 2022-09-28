@@ -6,9 +6,8 @@
       height: 100%;
       width: 100%;
       overflow-y: scroll;
-   
     "
-    class="md:pl-72 md:pr-72 md:pt-5 md:pb-2 sm:p-0 "
+    class="md:pl-72 md:pr-72 md:pt-5 md:pb-2 sm:p-0"
   >
     <div>
       <img
@@ -20,7 +19,7 @@
       <div class="flex flex-col">
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               1. Please rate the quality of the services you receive from
               CENORED.
             </p>
@@ -80,7 +79,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               2. How well does CENORED service meet your needs?
             </p>
           </div>
@@ -140,7 +139,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               3. How responsive has CENORED been to your questions/concerns
               about our service?
             </p>
@@ -201,7 +200,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               4. How do you compared to our service to that of our competitors?
             </p>
           </div>
@@ -261,7 +260,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               5. On a scale of 1 to 5, how likely are you to recommend CENORED
               to someone else?
             </p>
@@ -322,7 +321,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               6. On a scale of 1 to 5, how do you rate the correlation between
               CENORED tariffs and services?
             </p>
@@ -383,7 +382,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               7. How easy is it to engage our staff when you have a query or
               complaint?
             </p>
@@ -444,7 +443,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               8. How much effort did you put in to access the above assistance?
             </p>
           </div>
@@ -504,7 +503,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">9. Are our offices clean?</p>
+            <p class="text-cenoredblue">9. Are our offices clean?</p>
           </div>
           <div class="flex flex-row justify-center">
             <p>
@@ -562,7 +561,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               10. Which other options are available and you are considering as
               alternative to CENORED and why?
             </p>
@@ -598,7 +597,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               11. What would you improve about CENORED if you could?
             </p>
           </div>
@@ -634,7 +633,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               12. What is your approximate monthly expenditure to CENORED?
             </p>
           </div>
@@ -670,7 +669,7 @@
 
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
-            <p class="text-blue-400">
+            <p class="text-cenoredblue">
               13. Please suggest any improvement to our services to help CENORED
               serve you better.
             </p>

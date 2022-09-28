@@ -11,7 +11,7 @@
   >
     <div
       class="border-b-2"
-      style="display: flex; justify-content: space-between; align-items: center"
+      style="display: flex; justify-content: center; align-items: center"
     >
       <img src="@/assets/logo.png" style="height: 80px; margin-bottom: 10px" />
     </div>
@@ -43,17 +43,17 @@
         >
           <h1 class="text-3xl">Customer Satisfaction Survey</h1>
           <br />
-          <p class="text-blue-400">Dear Valued Customer,</p>
+          <p class="text-cenoredblue">Dear Valued Customer,</p>
           <br />
-          <p class="text-blue-400">
+          <p class="text-cenoredblue">
             Please take a moment to take our Customer Satisfaction Survey so we
             can
           </p>
-          <p class="text-blue-400">
+          <p class="text-cenoredblue">
             serve you better as we are committed to providing you with the best
             services
           </p>
-          <p class="text-blue-400">and customer experience possible.</p>
+          <p class="text-cenoredblue">and customer experience possible.</p>
         </div>
       </div>
       <div class="md:w-1/2 sm:w-full">
