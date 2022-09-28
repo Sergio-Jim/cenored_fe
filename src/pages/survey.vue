@@ -587,7 +587,7 @@
                 style="width: 50vw"
                 id="question10"
                 type="text"
-                placeholder="question10"
+                placeholder="Answer"
                 v-model="question10"
               />
             </p>
@@ -623,7 +623,7 @@
                 style="width: 50vw"
                 id="question11"
                 type="text"
-                placeholder="question11"
+                placeholder="Answer"
                 v-model="question11"
               />
             </p>
@@ -659,7 +659,7 @@
                 style="width: 50vw"
                 id="question12"
                 type="text"
-                placeholder="question12"
+                placeholder="Answer"
                 v-model="question12"
               />
             </p>
@@ -696,7 +696,7 @@
                 style="width: 50vw"
                 id="question13"
                 type="text"
-                placeholder="question13"
+                placeholder="Answer"
                 v-model="question13"
               />
             </p>
