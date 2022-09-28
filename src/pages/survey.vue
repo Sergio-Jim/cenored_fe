@@ -875,7 +875,7 @@ export default {
     return { toast };
   },
   methods: {
-    submitSurvey() {
+    async submitSurvey() {
       this.isLoading = true;
       this.$apollo
         .mutate({
