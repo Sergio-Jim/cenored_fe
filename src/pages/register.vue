@@ -67,7 +67,11 @@
         >
           <div style="margin-top: 15px; display: flex; justify-content: center">
             <div>
-              <form class="rounded px-8 pt-6 pb-8 mb-4" style="min-width: 30vw">
+              <form
+                @submit.prevent="fillSurvey"
+                class="rounded px-8 pt-6 pb-8 mb-4"
+                style="min-width: 30vw"
+              >
                 <br />
                 <div class="mb-4">
                   <label
@@ -92,6 +96,7 @@
                     type="firstName"
                     placeholder="First Name"
                     v-model="firstName"
+                    required
                   />
                 </div>
 
@@ -118,6 +123,7 @@
                     type="surname"
                     placeholder="Surname"
                     v-model="surname"
+                    required
                   />
                 </div>
 
@@ -140,8 +146,7 @@
                       justify-center
                     "
                     style="height: 40px"
-                    v-on:click="fillSurvey"
-                    type="button"
+                    type="submit"
                   >
                     <vue-loaders
                       v-if="this.loading"
