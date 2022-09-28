@@ -15,7 +15,7 @@
         style="height: 100%; width: 100%"
       />
     </div>
-    <form class="px-8 pt-6 pb-8 mb-4 mt-12">
+    <form class="px-8 pt-6 pb-8 mb-4 mt-12" @submit.prevent="submitSurvey">
       <div class="flex flex-col">
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
@@ -32,6 +32,7 @@
                 name="question1"
                 value="1"
                 v-model="question1"
+                required
               />
               <label for="question1-1"> 1</label>
               <input
@@ -41,6 +42,7 @@
                 name="question1"
                 value="2"
                 v-model="question1"
+                required
               />
               <label for="question1-2"> 2</label>
               <input
@@ -50,6 +52,7 @@
                 name="question1"
                 value="3"
                 v-model="question1"
+                required
               />
               <label for="question1-3"> 3</label>
               <input
@@ -58,6 +61,8 @@
                 type="radio"
                 name="question1"
                 value="4"
+                v-model="question1"
+                required
               />
               <label for="question1-4"> 4</label>
               <input
@@ -67,6 +72,7 @@
                 name="question1"
                 value="5"
                 v-model="question1"
+                required
               />
               <label for="question1-5"> 5</label>
             </p>
@@ -91,6 +97,7 @@
                 name="question2"
                 value="1"
                 v-model="question2"
+                required
               />
               <label for="question2-1"> 1</label>
               <input
@@ -100,6 +107,7 @@
                 name="question2"
                 value="2"
                 v-model="question2"
+                required
               />
               <label for="question2-2"> 2</label>
               <input
@@ -109,6 +117,7 @@
                 name="question2"
                 value="3"
                 v-model="question2"
+                required
               />
               <label for="question2-3"> 3</label>
               <input
@@ -118,6 +127,7 @@
                 name="question2"
                 value="4"
                 v-model="question2"
+                required
               />
               <label for="question2-4"> 4</label>
               <input
@@ -127,6 +137,7 @@
                 name="question2"
                 value="5"
                 v-model="question2"
+                required
               />
               <label for="question2-5"> 5</label>
             </p>
@@ -152,6 +163,7 @@
                 name="question3"
                 value="1"
                 v-model="question3"
+                required
               />
               <label for="question3-1"> 1</label>
               <input
@@ -161,6 +173,7 @@
                 name="question3"
                 value="2"
                 v-model="question3"
+                required
               />
               <label for="question3-2"> 2</label>
               <input
@@ -170,6 +183,7 @@
                 name="question3"
                 value="3"
                 v-model="question3"
+                required
               />
               <label for="question3-3"> 3</label>
               <input
@@ -179,6 +193,7 @@
                 name="question3"
                 value="4"
                 v-model="question3"
+                required
               />
               <label for="question3-4"> 4</label>
               <input
@@ -188,6 +203,7 @@
                 name="question3"
                 value="5"
                 v-model="question3"
+                required
               />
               <label for="question3-5"> 5</label>
             </p>
@@ -212,6 +228,7 @@
                 name="question4"
                 value="1"
                 v-model="question4"
+                required
               />
               <label for="question4-1"> 1</label>
               <input
@@ -221,6 +238,7 @@
                 name="question4"
                 value="2"
                 v-model="question4"
+                required
               />
               <label for="question4-2"> 2</label>
               <input
@@ -230,6 +248,7 @@
                 name="question4"
                 value="3"
                 v-model="question4"
+                required
               />
               <label for="question4-3"> 3</label>
               <input
@@ -239,6 +258,7 @@
                 name="question4"
                 value="4"
                 v-model="question4"
+                required
               />
               <label for="question4-4"> 4</label>
               <input
@@ -248,6 +268,7 @@
                 name="question4"
                 value="5"
                 v-model="question4"
+                required
               />
               <label for="question4-5"> 5</label>
             </p>
@@ -273,6 +294,7 @@
                 name="question5"
                 value="1"
                 v-model="question5"
+                required
               />
               <label for="question5-1"> 1</label>
               <input
@@ -282,6 +304,7 @@
                 name="question5"
                 value="2"
                 v-model="question5"
+                required
               />
               <label for="question5-2"> 2</label>
               <input
@@ -291,6 +314,7 @@
                 name="question5"
                 value="3"
                 v-model="question5"
+                required
               />
               <label for="question5-3"> 3</label>
               <input
@@ -300,6 +324,7 @@
                 name="question5"
                 value="4"
                 v-model="question5"
+                required
               />
               <label for="question5-4"> 4</label>
               <input
@@ -309,6 +334,7 @@
                 name="question5"
                 value="5"
                 v-model="question5"
+                required
               />
               <label for="question5-5"> 5</label>
             </p>
@@ -334,6 +360,7 @@
                 name="question6"
                 value="1"
                 v-model="question6"
+                required
               />
               <label for="question6-1"> 1</label>
               <input
@@ -343,6 +370,7 @@
                 name="question6"
                 value="2"
                 v-model="question6"
+                required
               />
               <label for="question6-2"> 2</label>
               <input
@@ -352,6 +380,7 @@
                 name="question6"
                 value="3"
                 v-model="question6"
+                required
               />
               <label for="question6-3"> 3</label>
               <input
@@ -361,6 +390,7 @@
                 name="question6"
                 value="4"
                 v-model="question6"
+                required
               />
               <label for="question6-4"> 4</label>
               <input
@@ -370,6 +400,7 @@
                 name="question6"
                 value="5"
                 v-model="question6"
+                required
               />
               <label for="question6-5"> 5</label>
             </p>
@@ -395,6 +426,7 @@
                 name="question7"
                 value="1"
                 v-model="question7"
+                required
               />
               <label for="question7-1"> 1</label>
               <input
@@ -404,6 +436,7 @@
                 name="question7"
                 value="2"
                 v-model="question7"
+                required
               />
               <label for="question7-2"> 2</label>
               <input
@@ -413,6 +446,7 @@
                 name="question7"
                 value="3"
                 v-model="question7"
+                required
               />
               <label for="question7-3"> 3</label>
               <input
@@ -422,6 +456,7 @@
                 name="question7"
                 value="4"
                 v-model="question7"
+                required
               />
               <label for="question7-4"> 4</label>
               <input
@@ -431,6 +466,7 @@
                 name="question7"
                 value="5"
                 v-model="question7"
+                required
               />
               <label for="question7-5"> 5</label>
             </p>
@@ -455,6 +491,7 @@
                 name="question8"
                 value="1"
                 v-model="question8"
+                required
               />
               <label for="question8-1"> 1</label>
               <input
@@ -464,6 +501,7 @@
                 name="question8"
                 value="2"
                 v-model="question8"
+                required
               />
               <label for="question8-2"> 2</label>
               <input
@@ -473,6 +511,7 @@
                 name="question8"
                 value="3"
                 v-model="question8"
+                required
               />
               <label for="question8-3"> 3</label>
               <input
@@ -482,6 +521,7 @@
                 name="question8"
                 value="4"
                 v-model="question8"
+                required
               />
               <label for="question8-4"> 4</label>
               <input
@@ -491,6 +531,7 @@
                 name="question8"
                 value="5"
                 v-model="question8"
+                required
               />
               <label for="question8-5"> 5</label>
             </p>
@@ -513,6 +554,7 @@
                 name="question9"
                 value="1"
                 v-model="question9"
+                required
               />
               <label for="question9-1"> 1</label>
               <input
@@ -522,6 +564,7 @@
                 name="question9"
                 value="2"
                 v-model="question9"
+                required
               />
               <label for="question9-2"> 2</label>
               <input
@@ -531,6 +574,7 @@
                 name="question9"
                 value="3"
                 v-model="question9"
+                required
               />
               <label for="question9-3"> 3</label>
               <input
@@ -540,6 +584,7 @@
                 name="question9"
                 value="4"
                 v-model="question9"
+                required
               />
               <label for="question9-4"> 4</label>
               <input
@@ -549,6 +594,7 @@
                 name="question9"
                 value="5"
                 v-model="question9"
+                required
               />
               <label for="question9-5"> 5</label>
             </p>
@@ -589,6 +635,7 @@
                 type="text"
                 placeholder="Answer"
                 v-model="question10"
+                required
               />
             </p>
           </div>
@@ -625,6 +672,7 @@
                 type="text"
                 placeholder="Answer"
                 v-model="question11"
+                required
               />
             </p>
           </div>
@@ -661,6 +709,7 @@
                 type="text"
                 placeholder="Answer"
                 v-model="question12"
+                required
               />
             </p>
           </div>
@@ -698,6 +747,7 @@
                 type="text"
                 placeholder="Answer"
                 v-model="question13"
+                required
               />
             </p>
           </div>
@@ -741,8 +791,7 @@
               rounded-lg
               ml-2
             "
-            type="button"
-            v-on:click="submitSurvey"
+            type="submit"
           >
             <vue-loaders
               v-if="this.isLoading"

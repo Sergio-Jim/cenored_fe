@@ -148,13 +148,7 @@
                     style="height: 40px"
                     type="submit"
                   >
-                    <vue-loaders
-                      v-if="this.loading"
-                      name="line-scale"
-                      color="black"
-                      scale="0.5"
-                    ></vue-loaders>
-                    <div v-else>Fill Survey</div>
+                    <div>Fill Survey</div>
                   </button>
                 </div>
               </form>
@@ -197,4 +191,5 @@ export default {
     
 <style scoped>
 </style>
+
     
