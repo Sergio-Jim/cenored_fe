@@ -714,6 +714,7 @@
               transform
               hover:bg-red-900 hover:text-white
               text-black
+              w-1/4
               px-4
               mty-8
               rounded-lg
@@ -734,6 +735,7 @@
               transform
               hover:bg-green-700 hover:text-white
               text-black
+              w-1/4
               px-4
               mty-8
               rounded-lg
@@ -742,7 +744,13 @@
             type="button"
             v-on:click="submitSurvey"
           >
-            <div class="py-2">Submit</div>
+            <vue-loaders
+              v-if="this.isLoading"
+              name="line-scale"
+              color="white"
+              scale="0.5"
+            ></vue-loaders>
+            <div class="py-2" v-else>Submit</div>
           </button>
         </div>
       </div>
@@ -807,6 +815,7 @@ export default {
       question11: "",
       question12: "",
       question13: "",
+      isLoading: false,
     };
   },
   setup() {
@@ -818,6 +827,7 @@ export default {
   },
   methods: {
     submitSurvey() {
+      this.isLoading = true;
       this.$apollo
         .mutate({
           mutation: gql`
@@ -883,7 +893,7 @@ export default {
           return data.createSurvey;
         })
         .then(({ status, message }) => {
-          this.isCreating = false;
+          this.isLoading = false;
           if (status) {
             this.toast.success(message);
             sessionStorage.clear();
@@ -894,7 +904,7 @@ export default {
           }
         })
         .catch((err) => {
-          this.loading = false;
+          this.isloading = false;
           this.toast.error(err.message || "Something went wrong.");
         });
     },
