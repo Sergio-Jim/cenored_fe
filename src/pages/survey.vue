@@ -15,7 +15,7 @@
         style="height: 100%; width: 100%"
       />
     </div>
-    <form class="px-8 pt-6 pb-8 mb-4 mt-12" @submit.prevent="submitSurvey">
+    <form @submit.prevent="submitSurvey" class="px-8 pt-6 pb-8 mb-4 mt-12">
       <div class="flex flex-col">
         <div class="flex flex-col mb-6">
           <div class="flex flex-row mb-2">
