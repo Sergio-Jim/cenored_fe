@@ -41,7 +41,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 5%;
+            margin-top: 3%;
           "
         >
           <div>
@@ -54,6 +54,35 @@
               :options="chartOptions"
               :series="series"
             ></apexchart>
+          </div>
+          <div>
+            <button class="relative w-max two" type="button">
+              <div class="py-2">
+                <span>Download All Data</span>
+                <span
+                  class="
+                    absolute
+                    -bottom-1
+                    left-1/2
+                    w-0
+                    transition-all
+                    h-1
+                    bg-cenoredgreen
+                  "
+                ></span>
+                <span
+                  class="
+                    absolute
+                    -bottom-1
+                    right-1/2
+                    w-0
+                    transition-all
+                    h-1
+                    bg-cenoredgreen
+                  "
+                ></span>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -74,23 +103,23 @@ export default {
       series: [
         {
           name: "Marine Sprite",
-          data: [44, 55, 41, 37, 22, 43, 21],
+          data: [44, 55, 41, 37, 22, 43, 21, 40, 51],
         },
         {
           name: "Striking Calf",
-          data: [53, 32, 33, 52, 13, 43, 32],
+          data: [53, 32, 33, 52, 13, 43, 32, 49, 28],
         },
         {
           name: "Tank Picture",
-          data: [12, 17, 11, 9, 15, 11, 20],
+          data: [12, 17, 11, 9, 15, 11, 20, 8, 13],
         },
         {
           name: "Bucket Slope",
-          data: [9, 7, 5, 8, 6, 9, 4],
+          data: [9, 7, 5, 8, 6, 9, 4, 5, 3],
         },
         {
           name: "Reborn Kid",
-          data: [25, 12, 19, 32, 25, 24, 10],
+          data: [25, 12, 19, 32, 25, 24, 10, 21, 8],
         },
       ],
       chartOptions: {
@@ -112,7 +141,7 @@ export default {
           text: "Fiction Books Sales",
         },
         xaxis: {
-          categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014],
+          categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
           labels: {
             formatter: function (val) {
               return val + "K";
@@ -147,3 +176,17 @@ export default {
   },
 };
 </script>
+
+<style>
+.one:hover span:last-child {
+  width: 100%;
+}
+
+.two:hover span {
+  width: 50%;
+}
+
+.three:hover span {
+  height: 100%;
+}
+</style>
