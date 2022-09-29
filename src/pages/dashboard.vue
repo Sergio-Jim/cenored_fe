@@ -102,23 +102,23 @@ export default {
     return {
       series: [
         {
-          name: "Marine Sprite",
+          name: "Disappointed",
           data: [44, 55, 41, 37, 22, 43, 21, 40, 51],
         },
         {
-          name: "Striking Calf",
+          name: "Slightly disappointed",
           data: [53, 32, 33, 52, 13, 43, 32, 49, 28],
         },
         {
-          name: "Tank Picture",
+          name: "Okay",
           data: [12, 17, 11, 9, 15, 11, 20, 8, 13],
         },
         {
-          name: "Bucket Slope",
+          name: "Good",
           data: [9, 7, 5, 8, 6, 9, 4, 5, 3],
         },
         {
-          name: "Reborn Kid",
+          name: "Exceptional",
           data: [25, 12, 19, 32, 25, 24, 10, 21, 8],
         },
       ],
@@ -127,6 +127,7 @@ export default {
           type: "bar",
           height: 350,
           stacked: true,
+          stackType: "100%",
         },
         plotOptions: {
           bar: {
@@ -138,13 +139,23 @@ export default {
           colors: ["#fff"],
         },
         title: {
-          text: "Fiction Books Sales",
+          text: "Customer Satisfaction Survey Results",
         },
         xaxis: {
-          categories: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+          categories: [
+            "Question 1",
+            "Question 2",
+            "Question 3",
+            "Question 4",
+            "Question 5",
+            "Question 6",
+            "Question 7",
+            "Question 8",
+            "Question 9",
+          ],
           labels: {
             formatter: function (val) {
-              return val + "K";
+              return val + "%";
             },
           },
         },
@@ -156,7 +167,7 @@ export default {
         tooltip: {
           y: {
             formatter: function (val) {
-              return val + "K";
+              return val;
             },
           },
         },
