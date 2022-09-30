@@ -58,6 +58,7 @@
                     id="username"
                     type="username"
                     placeholder="username"
+                    v-model="username"
                   />
                 </div>
                 <div class="mb-6">
@@ -82,6 +83,7 @@
                     id="password"
                     type="password"
                     placeholder="Password"
+                    v-model="password"
                   />
                 </div>
                 <div class="flex items-center justify-between">
@@ -103,6 +105,7 @@
                       justify-center
                     "
                     style="height: 40px"
+                    v-on:click="login"
                     type="button"
                   >
                     <vue-loaders
@@ -122,3 +125,76 @@
     </div>
   </div>
 </template>
+
+<script>
+import gql from "graphql-tag";
+import { useToast } from "vue-toastification";
+import useVuelidate from "@vuelidate/core";
+import { required } from "@vuelidate/validators";
+
+export default {
+  name: "Login",
+  setup() {
+    const toast = useToast();
+    return { toast, v$: useVuelidate() };
+  },
+
+  data() {
+    return {
+      loading: false,
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    async login() {
+      const isFormCorrect = await this.v$.$validate();
+      if (!isFormCorrect) return;
+      this.loading = true;
+      this.$apollo
+        .mutate({
+          mutation: gql`
+            mutation LoginUser($username: String!, $password: String!) {
+              loginUser(username: $username, password: $password) {
+                token
+                status
+                message
+              }
+            }
+          `,
+
+          variables: {
+            username: this.username,
+            password: this.password,
+          },
+        })
+        .then(({ data }) => {
+          return data.loginUser;
+        })
+        .then(({ token, status, message }) => {
+          this.loading = false;
+          if (status) {
+            localStorage.setItem("token", token);
+            this.$router.push("/dashboard");
+          } else {
+            this.toast.error(message);
+          }
+        })
+        .catch((err) => {
+          this.loading = false;
+          this.toast.error(err.message || "Something went wrong");
+        });
+    },
+  },
+  validations() {
+    return {
+      username: {
+        required,
+      },
+      password: {
+        required,
+      },
+    };
+  },
+};
+</script>
