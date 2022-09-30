@@ -57,7 +57,11 @@
             ></apexchart>
           </div>
           <div>
-            <button class="relative w-max two" type="button">
+            <button
+              class="relative w-max two"
+              type="button"
+              v-on:click="downloadCSV"
+            >
               <div class="py-2">
                 <span>Download All Data</span>
                 <span
@@ -95,35 +99,13 @@
 import gql from "graphql-tag";
 import VueApexCharts from "vue3-apexcharts";
 import { ExportToCsv } from "export-to-csv";
-import { ref } from "vue";
 
 export default {
   name: "DashboardLanding",
   data() {
     return {
       allStats: {},
-      // series: [
-      //   {
-      //     name: "Disappointed",
-      //     data: [44, 55, 41, 37, 22, 43, 21, 40, 51],
-      //   },
-      //   {
-      //     name: "Slightly disappointed",
-      //     data: [53, 32, 33, 52, 13, 43, 32, 49, 28],
-      //   },
-      //   {
-      //     name: "Okay",
-      //     data: [12, 17, 11, 9, 15, 11, 20, 8, 13],
-      //   },
-      //   {
-      //     name: "Good",
-      //     data: [9, 7, 5, 8, 6, 9, 4, 5, 3],
-      //   },
-      //   {
-      //     name: "Exceptional",
-      //     data: [25, 12, 19, 32, 25, 24, 10, 21, 8],
-      //   },
-      // ],
+      downloadAllData: {},
       series: [],
       chartOptions: {
         chart: {
@@ -335,6 +317,57 @@ export default {
           timeout: 2000,
         });
       });
+  },
+  methods: {
+    downloadCSV() {
+      this.$apollo
+        .query({
+          query: gql`
+            query getAllSurveys {
+              getAllSurveys {
+                firstName
+                surname
+                question1
+                question2
+                question3
+                question4
+                question5
+                question6
+                question7
+                question8
+                question9
+                question10
+                question11
+                question12
+                question13
+                dateOfSubmit
+              }
+            }
+          `,
+        })
+        .then(({ data }) => {
+          this.downloadAllData = data.getAllSurveys;
+        })
+        .catch((err) => {
+          this.toast.error(err.message || "Something went wrong");
+        });
+
+      const options = {
+        fieldSeparator: ",",
+        quoteStrings: '"',
+        decimalSeparator: ".",
+        showLabels: true,
+        showTitle: false,
+        title: "Surveys ",
+        useTextFile: false,
+        useBom: true,
+        useKeysAsHeaders: true,
+      };
+
+      const csvExporter = new ExportToCsv(options);
+
+      csvExporter.generateCsv(this.downloadAllData);
+    },
   },
 };
 </script>
