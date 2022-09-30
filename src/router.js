@@ -59,7 +59,8 @@ const routes = [
     //         next({ name: "login" })
     //       })
     //       .catch((err) => {
-    //         console.log(err, " uuuuuuu")
+    //         console.log(err, "something is wrong")
+    //         throw err;
     //       });
     //   } else {
     //     next({ name: "login" });
