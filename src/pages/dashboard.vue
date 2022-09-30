@@ -251,92 +251,38 @@ export default {
       .then(({ data }) => {
         var stats = data.getStatistics;
         this.allStats = data.getStatistics;
-
+      
         this.$refs.statistics.updateSeries([
           {
             name: "Exceptional",
             type: "column",
-            data: stats.map((stat) => {
-              console.log(
-                stat.question1_Exceptional,
-                stat.question2_Exceptional
-              );
-              return (
-                stat.question1_Exceptional, stat.question2_Exceptional
-                // stat.question3_Exceptional,
-                // stat.question4_Exceptional,
-                // stat.question5_Exceptional,
-                // stat.question6_Exceptional,
-                // stat.question7_Exceptional,
-                // stat.question8_Exceptional,
-                // stat.question9_Exceptional
-              );
-            }),
+            data: [stats[0].question1_Exceptional, stats[0].question2_Exceptional,stats[0].question3_Exceptional,stats[0].question4_Exceptional,stats[0].question5_Exceptional,stats[0].question6_Exceptional,stats[0].question7_Exceptional,stats[0].question8_Exceptional,stats[0].question9_Exceptional]
+            
+            
           },
           {
             name: "Good",
             type: "column",
-            data: stats.map((stat) => {
-              return (
-                stat.question1_Good, stat.question2_Good
-                // stat.question3_Good,
-                // stat.question4_Good,
-                // stat.question5_Good,
-                // stat.question6_Good,
-                // stat.question7_Good,
-                // stat.question8_Good,
-                // stat.question9_Good
-              );
-            }),
+            data: [stats[0].question1_Good, stats[0].question2_Good, stats[0].question3_Good, stats[0].question4_Good, stats[0].question5_Good, stats[0].question6_Good, stats[0].question7_Good, stats[0].question8_Good, stats[0].question9_Good]
+              
           },
           {
             name: "Okay",
             type: "column",
-            data: stats.map((stat) => {
-              return (
-                stat.question1_Okay, stat.question2_Okay
-                // stat.question3_Okay,
-                // stat.question4_Okay,
-                // stat.question5_Okay,
-                // stat.question6_Okay,
-                // stat.question7_Okay,
-                // stat.question8_Okay,
-                // stat.question9_Okay
-              );
-            }),
+            data: [stats[0].question1_Okay, stats[0].question2_Okay,stats[0].question3_Okay,stats[0].question4_Okay,stats[0].question5_Okay,stats[0].question6_Okay,stats[0].question7_Okay,stats[0].question8_Okay,stats[0].question9_Okay]
+             
           },
           {
             name: "SlightlyDisappointed",
             type: "column",
-            data: stats.map((stat) => {
-              return (
-                stat.question1_SlightlyDisappointed,
-                stat.question2_SlightlyDisappointed
-                // stat.question3_SlightlyDisappointed,
-                // stat.question4_SlightlyDisappointed,
-                // stat.question5_SlightlyDisappointed,
-                // stat.question6_SlightlyDisappointed,
-                // stat.question7_SlightlyDisappointed,
-                // stat.question8_SlightlyDisappointed,
-                // stat.question9_SlightlyDisappointed
-              );
-            }),
-          },
+            data: [stats[0].question1_SlightlyDisappointed, stats[0].question2_SlightlyDisappointed, stats[0].question3_SlightlyDisappointed, stats[0].question4_SlightlyDisappointed, stats[0].question5_SlightlyDisappointed, stats[0].question6_SlightlyDisappointed, stats[0].question7_SlightlyDisappointed, stats[0].question8_SlightlyDisappointed, stats[0].question9_SlightlyDisappointed]
+            
+            },
           {
             name: "Disappointed",
             type: "column",
-            data: stats.map((stat) => {
-              return (
-                stat.question1_Disappointed, stat.question2_Disappointed
-                // stat.question3_Disappointed,
-                // stat.question4_Disappointed,
-                // stat.question5_Disappointed,
-                // stat.question6_Disappointed,
-                // stat.question7_Disappointed,
-                // stat.question8_Disappointed,
-                // stat.question9_Disappointed
-              );
-            }),
+            data: [stats[0].question1_Disappointed, stats[0].question2_Disappointed, stats[0].question3_Disappointed, stats[0].question4_Disappointed, stats[0].question5_Disappointed, stats[0].question6_Disappointed, stats[0].question7_Disappointed, stats[0].question8_Disappointed, stats[0].question9_Disappointed]
+             
           },
         ]);
       })
