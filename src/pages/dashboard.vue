@@ -251,38 +251,82 @@ export default {
       .then(({ data }) => {
         var stats = data.getStatistics;
         this.allStats = data.getStatistics;
-      
+
         this.$refs.statistics.updateSeries([
           {
-            name: "Exceptional",
+            name: "Disappointed",
             type: "column",
-            data: [stats[0].question1_Exceptional, stats[0].question2_Exceptional,stats[0].question3_Exceptional,stats[0].question4_Exceptional,stats[0].question5_Exceptional,stats[0].question6_Exceptional,stats[0].question7_Exceptional,stats[0].question8_Exceptional,stats[0].question9_Exceptional]
-            
-            
-          },
-          {
-            name: "Good",
-            type: "column",
-            data: [stats[0].question1_Good, stats[0].question2_Good, stats[0].question3_Good, stats[0].question4_Good, stats[0].question5_Good, stats[0].question6_Good, stats[0].question7_Good, stats[0].question8_Good, stats[0].question9_Good]
-              
-          },
-          {
-            name: "Okay",
-            type: "column",
-            data: [stats[0].question1_Okay, stats[0].question2_Okay,stats[0].question3_Okay,stats[0].question4_Okay,stats[0].question5_Okay,stats[0].question6_Okay,stats[0].question7_Okay,stats[0].question8_Okay,stats[0].question9_Okay]
-             
+            data: [
+              stats[0].question1_Disappointed,
+              stats[0].question2_Disappointed,
+              stats[0].question3_Disappointed,
+              stats[0].question4_Disappointed,
+              stats[0].question5_Disappointed,
+              stats[0].question6_Disappointed,
+              stats[0].question7_Disappointed,
+              stats[0].question8_Disappointed,
+              stats[0].question9_Disappointed,
+            ],
           },
           {
             name: "SlightlyDisappointed",
             type: "column",
-            data: [stats[0].question1_SlightlyDisappointed, stats[0].question2_SlightlyDisappointed, stats[0].question3_SlightlyDisappointed, stats[0].question4_SlightlyDisappointed, stats[0].question5_SlightlyDisappointed, stats[0].question6_SlightlyDisappointed, stats[0].question7_SlightlyDisappointed, stats[0].question8_SlightlyDisappointed, stats[0].question9_SlightlyDisappointed]
-            
-            },
+            data: [
+              stats[0].question1_SlightlyDisappointed,
+              stats[0].question2_SlightlyDisappointed,
+              stats[0].question3_SlightlyDisappointed,
+              stats[0].question4_SlightlyDisappointed,
+              stats[0].question5_SlightlyDisappointed,
+              stats[0].question6_SlightlyDisappointed,
+              stats[0].question7_SlightlyDisappointed,
+              stats[0].question8_SlightlyDisappointed,
+              stats[0].question9_SlightlyDisappointed,
+            ],
+          },
           {
-            name: "Disappointed",
+            name: "Okay",
             type: "column",
-            data: [stats[0].question1_Disappointed, stats[0].question2_Disappointed, stats[0].question3_Disappointed, stats[0].question4_Disappointed, stats[0].question5_Disappointed, stats[0].question6_Disappointed, stats[0].question7_Disappointed, stats[0].question8_Disappointed, stats[0].question9_Disappointed]
-             
+            data: [
+              stats[0].question1_Okay,
+              stats[0].question2_Okay,
+              stats[0].question3_Okay,
+              stats[0].question4_Okay,
+              stats[0].question5_Okay,
+              stats[0].question6_Okay,
+              stats[0].question7_Okay,
+              stats[0].question8_Okay,
+              stats[0].question9_Okay,
+            ],
+          },
+          {
+            name: "Good",
+            type: "column",
+            data: [
+              stats[0].question1_Good,
+              stats[0].question2_Good,
+              stats[0].question3_Good,
+              stats[0].question4_Good,
+              stats[0].question5_Good,
+              stats[0].question6_Good,
+              stats[0].question7_Good,
+              stats[0].question8_Good,
+              stats[0].question9_Good,
+            ],
+          },
+          {
+            name: "Exceptional",
+            type: "column",
+            data: [
+              stats[0].question1_Exceptional,
+              stats[0].question2_Exceptional,
+              stats[0].question3_Exceptional,
+              stats[0].question4_Exceptional,
+              stats[0].question5_Exceptional,
+              stats[0].question6_Exceptional,
+              stats[0].question7_Exceptional,
+              stats[0].question8_Exceptional,
+              stats[0].question9_Exceptional,
+            ],
           },
         ]);
       })
