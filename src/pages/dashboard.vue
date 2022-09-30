@@ -124,6 +124,7 @@ export default {
       //     data: [25, 12, 19, 32, 25, 24, 10, 21, 8],
       //   },
       // ],
+      series: [],
       chartOptions: {
         chart: {
           type: "bar",
@@ -140,6 +141,11 @@ export default {
           width: 1,
           colors: ["#fff"],
         },
+        dataLabels: {
+          enabled: true,
+          enabledOnSeries: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+        },
+        labels: [],
         title: {
           text: "Customer Satisfaction Survey Results",
         },
@@ -248,129 +254,90 @@ export default {
 
         this.$refs.statistics.updateSeries([
           {
-            name: "question 1",
+            name: "Exceptional",
             type: "column",
             data: stats.map((stat) => {
               console.log(
                 stat.question1_Exceptional,
-                stat.question1_Good,
-                stat.question1_Okay,
-                stat.question1_SlightlyDisappointed,
-                stat.question1_Disappointed
+                stat.question2_Exceptional
               );
               return (
-                stat.question1_Exceptional,
-                stat.question1_Good,
-                stat.question1_Okay,
-                stat.question1_SlightlyDisappointed,
-                stat.question1_Disappointed
+                stat.question1_Exceptional, stat.question2_Exceptional
+                // stat.question3_Exceptional,
+                // stat.question4_Exceptional,
+                // stat.question5_Exceptional,
+                // stat.question6_Exceptional,
+                // stat.question7_Exceptional,
+                // stat.question8_Exceptional,
+                // stat.question9_Exceptional
               );
             }),
           },
-          // {
-          //   name: "question 2",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question2_Exceptional,
-          //       stat.question2_Good,
-          //       stat.question2_Okay,
-          //       stat.question2_SlightlyDisappointed,
-          //       stat.question2_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 3",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question3_Exceptional,
-          //       stat.question3_Good,
-          //       stat.question3_Okay,
-          //       stat.question3_SlightlyDisappointed,
-          //       stat.question3_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 4",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question4_Exceptional,
-          //       stat.question4_Good,
-          //       stat.question4_Okay,
-          //       stat.question4_SlightlyDisappointed,
-          //       stat.question4_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 5",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question5_Exceptional,
-          //       stat.question5_Good,
-          //       stat.question5_Okay,
-          //       stat.question5_SlightlyDisappointed,
-          //       stat.question5_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 6",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question6_Exceptional,
-          //       stat.question6_Good,
-          //       stat.question6_Okay,
-          //       stat.question6_SlightlyDisappointed,
-          //       stat.question6_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 7",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question7_Exceptional,
-          //       stat.question7_Good,
-          //       stat.question7_Okay,
-          //       stat.question7_SlightlyDisappointed,
-          //       stat.question7_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 8",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question8_Exceptional,
-          //       stat.question8_Good,
-          //       stat.question8_Okay,
-          //       stat.question8_SlightlyDisappointed,
-          //       stat.question8_Disappointed,
-          //     ];
-          //   }),
-          // },
-          // {
-          //   name: "question 9",
-          //   type: "column",
-          //   data: stats.map((stat) => {
-          //     return [
-          //       stat.question9_Exceptional,
-          //       stat.question9_Good,
-          //       stat.question9_Okay,
-          //       stat.question9_SlightlyDisappointed,
-          //       stat.question9_Disappointed,
-          //     ];
-          //   }),
-          // },
+          {
+            name: "Good",
+            type: "column",
+            data: stats.map((stat) => {
+              return (
+                stat.question1_Good, stat.question2_Good
+                // stat.question3_Good,
+                // stat.question4_Good,
+                // stat.question5_Good,
+                // stat.question6_Good,
+                // stat.question7_Good,
+                // stat.question8_Good,
+                // stat.question9_Good
+              );
+            }),
+          },
+          {
+            name: "Okay",
+            type: "column",
+            data: stats.map((stat) => {
+              return (
+                stat.question1_Okay, stat.question2_Okay
+                // stat.question3_Okay,
+                // stat.question4_Okay,
+                // stat.question5_Okay,
+                // stat.question6_Okay,
+                // stat.question7_Okay,
+                // stat.question8_Okay,
+                // stat.question9_Okay
+              );
+            }),
+          },
+          {
+            name: "SlightlyDisappointed",
+            type: "column",
+            data: stats.map((stat) => {
+              return (
+                stat.question1_SlightlyDisappointed,
+                stat.question2_SlightlyDisappointed
+                // stat.question3_SlightlyDisappointed,
+                // stat.question4_SlightlyDisappointed,
+                // stat.question5_SlightlyDisappointed,
+                // stat.question6_SlightlyDisappointed,
+                // stat.question7_SlightlyDisappointed,
+                // stat.question8_SlightlyDisappointed,
+                // stat.question9_SlightlyDisappointed
+              );
+            }),
+          },
+          {
+            name: "Disappointed",
+            type: "column",
+            data: stats.map((stat) => {
+              return (
+                stat.question1_Disappointed, stat.question2_Disappointed
+                // stat.question3_Disappointed,
+                // stat.question4_Disappointed,
+                // stat.question5_Disappointed,
+                // stat.question6_Disappointed,
+                // stat.question7_Disappointed,
+                // stat.question8_Disappointed,
+                // stat.question9_Disappointed
+              );
+            }),
+          },
         ]);
       })
       .catch((err) => {
