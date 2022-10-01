@@ -42,30 +42,30 @@ const routes = [
   {
     path: "/dashboard",
     name: "dashboard",
-    // beforeEnter: (to, from, next) => {
-    //   setToken();
-    //   if (localStorage.getItem("token") !== null) {
-    //     axios({
-    //       method: "GET",
-    //       headers,
-    //       url:
-    //         process.env.NODE_ENV == "production"
-    //           ? "https://dolphin-app-ewqob.ondigitalocean.app"
-    //           : "http://localhost:4000/graphql",
-    //     })
-    //       .then((res) => {
-    //         if (res.data.success) 
-    //           next()
-    //         next({ name: "login" })
-    //       })
-    //       .catch((err) => {
-    //         console.log(err, "something is wrong")
-    //         throw err;
-    //       });
-    //   } else {
-    //     next({ name: "login" });
-    //   }
-    // },
+    beforeEnter: (to, from, next) => {
+      setToken();
+      if (localStorage.getItem("token") !== null) {
+        axios({
+          method: "GET",
+          headers,
+          url:
+            process.env.NODE_ENV == "production"
+              ? "https://dolphin-app-ewqob.ondigitalocean.app"
+              : "http://localhost:4000",
+        })
+          .then((res) => {
+            if (res.data.success) 
+              next()
+            next({ name: "login" })
+          })
+          .catch((err) => {
+            console.log(err, "something is wrong")
+            throw err;
+          });
+      } else {
+        next({ name: "login" });
+      }
+    },
     component: Dashboard,
     props: true,
   },
