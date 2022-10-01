@@ -764,7 +764,7 @@
               transform
               hover:bg-red-900 hover:text-white
               text-black
-              w-1/4
+              w-2/4
               px-4
               mty-8
               rounded-lg
@@ -785,7 +785,7 @@
               transform
               hover:bg-green-700 hover:text-white
               text-black
-              w-1/4
+              w-2/4
               px-4
               mty-8
               rounded-lg

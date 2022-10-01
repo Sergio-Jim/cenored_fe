@@ -45,15 +45,12 @@
           <br />
           <p class="text-cenoredblue">Dear Valued Customer,</p>
           <br />
-          <p class="text-cenoredblue">
+          <div style="max-width: 500px">
+            <p class="text-cenoredblue">
             Please take a moment to take our Customer Satisfaction Survey so we
-            can
-          </p>
-          <p class="text-cenoredblue">
-            serve you better as we are committed to providing you with the best
-            services
-          </p>
-          <p class="text-cenoredblue">and customer experience possible.</p>
+            can serve you better as we are committed to providing you with the best
+            services and customer experience possible.</p>
+          </div>
         </div>
       </div>
       <div class="md:w-1/2 sm:w-full">
