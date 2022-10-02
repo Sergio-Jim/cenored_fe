@@ -13,7 +13,7 @@
       class="border-b-2"
       style="display: flex; justify-content: center; align-items: center"
     >
-      <img src="@/assets/logo.png" style="height: 80px; margin-bottom: 10px" />
+      <img src="@/assets/logo.svg" style="height: 80px; margin-bottom: 10px" />
     </div>
     <div
       class="

@@ -13,7 +13,7 @@
       class="border-b-2"
       style="display: flex; justify-content: space-between; align-items: center"
     >
-      <img src="@/assets/logo.png" style="height: 80px; margin-bottom: 10px" />
+      <img src="@/assets/logo.svg" style="height: 80px; margin-bottom: 10px" />
       <span
         style="cursor: pointer; margin-bottom: 10px"
         v-on:click="this.$router.push('/')"
