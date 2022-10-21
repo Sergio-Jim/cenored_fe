@@ -3,6 +3,8 @@ import Register from "./pages/register";
 import Survey from "./pages/survey";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import General from "./components/dashboard/general.vue";
+import Settings from "./components/dashboard/settings.vue";
 import axios from "axios";
 
 let headers = {
@@ -54,12 +56,11 @@ const routes = [
               : "http://localhost:4000",
         })
           .then((res) => {
-            if (res.data.success) 
-              next()
-            next({ name: "login" })
+            if (res.data.success) next();
+            next({ name: "login" });
           })
           .catch((err) => {
-            console.log(err, "something is wrong")
+            console.log(err, "something is wrong");
             throw err;
           });
       } else {
@@ -68,6 +69,20 @@ const routes = [
     },
     component: Dashboard,
     props: true,
+    children: [
+      {
+        path: "",
+        component: General,
+      },
+      {
+        path: "general",
+        component: General,
+      },
+      {
+        path: "settings",
+        component: Settings,
+      },
+    ],
   },
 ];
 export default createRouter({
