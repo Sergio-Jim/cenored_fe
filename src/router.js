@@ -5,6 +5,10 @@ import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import General from "./components/dashboard/general.vue";
 import Settings from "./components/dashboard/settings.vue";
+// import ChangePassword from "./pages/changePassword";
+// import RecoveryEmail from "./pages/forgotPassword/recoveryEmail.vue";
+// import NewPassword from "./pages/forgotPassword/newPassword.vue";
+// import ForgotPassword from "./pages/forgotPassword";
 import axios from "axios";
 
 let headers = {
@@ -84,6 +88,24 @@ const routes = [
       },
     ],
   },
+  // {
+  //   path: "/changePassword",
+  //   name: "changePassword",
+  //   component: ChangePassword,
+  //   props: true,
+  // },
+  // {
+  //   path: "/recoveryEmail",
+  //   name: "recoveryEmail",
+  //   component: RecoveryEmail,
+  //   props: true,
+  // },
+  // {
+  //   path: "/newPassword",
+  //   name: "newPassword",
+  //   component: NewPassword,
+  //   props: true,
+  // },
 ];
 export default createRouter({
   history: createWebHistory(),

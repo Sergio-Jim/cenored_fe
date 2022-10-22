@@ -118,6 +118,11 @@
                   </button>
                 </div>
               </form>
+              <!-- <router-link to="/recoveryEmail">
+                <div style="display: flex; justify-content: center">
+                  Forgot Password?
+                </div>
+              </router-link> -->
             </div>
           </div>
         </div>

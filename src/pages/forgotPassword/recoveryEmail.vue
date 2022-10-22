@@ -13,7 +13,7 @@
       class="border-b-2"
       style="display: flex; justify-content: space-between; align-items: center"
     >
-      <router-link to="/dashboard/settings">
+      <router-link to="/login">
         <img
           src="@/assets/logo.svg"
           style="height: 80px; margin-bottom: 10px"
@@ -37,40 +37,15 @@
               <div
                 style="display: flex; justify-content: center; font-size: 20px"
               >
-                Change Password
+                Forgot Password
               </div>
               <form class="rounded px-8 pt-6 pb-8 mb-4" style="min-width: 30vw">
                 <br />
-                <div class="mb-4">
-                  <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
-                    for="oldPassword"
-                    >Old Password</label
-                  >
-                  <input
-                    class="
-                      shadow
-                      appearance-none
-                      border
-                      rounded
-                      w-full
-                      py-2
-                      px-3
-                      text-gray-700
-                      leading-tight
-                      focus:outline-none focus:shadow-outline
-                    "
-                    id="oldPassword"
-                    type="oldPassword"
-                    placeholder="Old Password"
-                    v-model="oldPassword"
-                  />
-                </div>
                 <div class="mb-6">
                   <label
                     class="block text-gray-700 text-sm font-bold mb-2"
-                    for="newPassword"
-                    >New Password</label
+                    for="recoveryEmail"
+                    >Recovery Email</label
                   >
                   <input
                     class="
@@ -85,10 +60,10 @@
                       leading-tight
                       focus:outline-none focus:shadow-outline
                     "
-                    id="newPassword"
-                    type="newPassword"
-                    placeholder="New Password"
-                    v-model="newPassword"
+                    id="recoveryEmail"
+                    type="recoveryEmail"
+                    placeholder="Recovery Email"
+                    v-model="recoveryEmail"
                   />
                 </div>
                 <div class="flex items-center justify-between">

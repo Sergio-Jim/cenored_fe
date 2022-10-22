@@ -107,7 +107,7 @@
                 type="button"
               >
                 <vue-loaders
-                  v-if="this.loading"
+                  v-if="this.loadingUpdate"
                   name="line-scale"
                   color="black"
                   scale="0.5"
@@ -117,7 +117,7 @@
               </button>
             </div>
           </form>
-          <div
+          <!-- <div
             style="
               display: flex;
               flex-direction: column;
@@ -148,20 +148,13 @@
                   style="height: 40px"
                   type="button"
                 >
-                  <vue-loaders
-                    v-if="this.loading"
-                    name="line-scale"
-                    color="black"
-                    scale="0.5"
-                  >
-                  </vue-loaders>
-                  <div class="py-2" v-else>Change Password</div>
+                  <div class="py-2">Change Password</div>
                 </button>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <div
+          <!-- <div
             style="
               display: flex;
               flex-direction: column;
@@ -193,7 +186,7 @@
                   type="button"
                 >
                   <vue-loaders
-                    v-if="this.loading"
+                    v-if="this.loadingDelete"
                     name="line-scale"
                     color="black"
                     scale="0.5"
@@ -203,7 +196,7 @@
                 </button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- here -->
@@ -292,7 +285,8 @@ export default {
   name: "Settings",
   data() {
     return {
-      loading: false,
+      loadingUpdate: false,
+      loadingDelete: false,
       username: "",
       recoveryEmail: "",
     };
@@ -332,7 +326,7 @@ export default {
 
       if (!isFormCorrect) return;
 
-      this.loading = true;
+      this.loadingUpdate = true;
       this.$apollo
         .mutate({
           mutation: gql`
@@ -348,10 +342,10 @@ export default {
         })
         .then(({ data }) => {
           this.toast.success(data.updateUser);
-          this.loading = false;
+          this.loadingUpdate = false;
         })
         .catch((err) => {
-          this.loading = false;
+          this.loadingUpdate = false;
           this.toast.error(err.message || "Something went wrong");
         });
     },
